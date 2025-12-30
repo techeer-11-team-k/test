@@ -1,0 +1,33 @@
+name: 📝 일반 이슈
+description: 위 템플릿에 해당하지 않는 일반적인 이슈를 작성할 때 사용합니다
+title: ""
+labels: []
+body:
+  - type: textarea
+    id: content
+    attributes:
+      label: 내용
+      description: 이슈에 대한 내용을 자유롭게 작성해주세요
+      placeholder: 이슈 내용을 작성해주세요...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: 카테고리
+      description: 이슈의 카테고리를 선택해주세요
+      options:
+        - 문서화
+        - 리팩토링
+        - 성능 개선
+        - 기타
+      default: 3
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: 추가 정보
+      description: 참고할 만한 정보가 있다면 작성해주세요
+      placeholder: 추가 정보를 여기에 작성해주세요
+

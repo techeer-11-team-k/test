@@ -1,0 +1,73 @@
+name: 🐛 버그 리포트
+description: 버그를 발견했을 때 사용하는 템플릿입니다
+title: "[버그] "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: 버그 설명
+      description: 버그에 대한 명확하고 간결한 설명을 작성해주세요
+      placeholder: 버그가 무엇인지 설명해주세요
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 재현 단계
+      description: 버그를 재현하는 방법을 단계별로 작성해주세요
+      placeholder: |
+        1. '...'로 이동
+        2. '...' 클릭
+        3. '...'까지 스크롤
+        4. 오류 확인
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 예상 동작
+      description: 예상했던 정상적인 동작을 설명해주세요
+      placeholder: 이렇게 동작해야 합니다...
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: 실제 동작
+      description: 실제로 발생한 동작을 설명해주세요
+      placeholder: 실제로는 이렇게 동작했습니다...
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: 환경 정보
+      description: 다음 정보를 작성해주세요
+      placeholder: |
+        - OS: [예: Ubuntu 22.04]
+        - 브라우저: [예: Chrome 120]
+        - 버전: [예: v1.0.0]
+      value: |
+        - OS: 
+        - 브라우저: 
+        - 버전: 
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: 스크린샷
+      description: 가능하다면 스크린샷을 첨부해주세요
+      placeholder: 스크린샷을 여기에 드래그 앤 드롭하세요
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: 추가 정보
+      description: 기타 참고할 만한 정보가 있다면 작성해주세요
+      placeholder: 추가로 알려주고 싶은 내용이 있다면 작성해주세요
+
