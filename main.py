@@ -56,6 +56,12 @@ async def kangmoon_html(request: Request, name: str = "kangmoon", desc: str = "H
 async def kangmoon():
     return {"message": "kangmoon"}
 
+@app.get("/hangjung")
+async def hangjung():
+    return {"message": "hangjung"}
 
+@app.get("/hangjung/html")
+async def hangjung_html(request: Request, name: str = "항중",desc: str = "주제가 안나오네요"):
+    return templates.TemplateResponse("hangjung.html", {"request": request, "name": name, "desc": desc})
 
 
