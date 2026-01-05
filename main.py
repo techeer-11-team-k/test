@@ -2,6 +2,7 @@
 from fastapi import FastAPI, Request
 from enum import Enum
 from fastapi.templating import Jinja2Templates
+from fastapi.responses import HTMLResponse
 
 # fastapi 객체 생성
 app = FastAPI()
@@ -46,15 +47,21 @@ async def read_query(skip : int = 0, limit: int = 2): # 초기값을 지정한 �
 
 
 # 여기서부터 1월 5일의 과제를 시작합니다..
-@app.get("/kangmoon/html")
-async def kangmoon_html(request: Request, name: str = "kangmoon", desc: str = "Hello, World!"):
+
+@app.get("/chanyoung")
+async def chanyoung():
+    return {"message": "chanyoung"}
+
+@app.get("/chanyoung/html")
+async def chanyoung_html(
+    request: Request, name: str = "chanyoung",
+    desc: str = "안녕하세요, chanyoung"
+):
+
     return templates.TemplateResponse(
         "example.html", {"request": request, "name": name, "desc": desc}
     )
 
-@app.get("/kangmoon")
-async def kangmoon():
-    return {"message": "kangmoon"}
 
 
 
