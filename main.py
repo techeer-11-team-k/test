@@ -45,7 +45,7 @@ async def read_query(skip : int = 0, limit: int = 2): # 초기값을 지정한 �
     return items_db[skip : skip + limit]
 
 
-# 여기서부터 1월 5일의 과제를 시작합니다.
+# 여기서부터 1월 5일의 과제를 시작합니다..
 @app.get("/kangmoon/html")
 async def kangmoon_html(request: Request, name: str = "kangmoon", desc: str = "Hello, World!"):
     return templates.TemplateResponse(
