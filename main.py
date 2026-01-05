@@ -63,6 +63,12 @@ async def chanyoung_html(
     )
 
 
+@app.get("/hangjung")
+async def hangjung():
+    return {"message": "hangjung"}
 
+@app.get("/hangjung/html")
+async def hangjung_html(request: Request, name: str = "항중",desc: str = "주제가 안나오네요"):
+    return templates.TemplateResponse("hangjung.html", {"request": request, "name": name, "desc": desc})
 
 
