@@ -72,3 +72,10 @@ async def hangjung_html(request: Request, name: str = "항중",desc: str = "주�
     return templates.TemplateResponse("hangjung.html", {"request": request, "name": name, "desc": desc})
 
 
+
+@app.get("/sua")
+async def sua():
+    return {"message": "sua"}
+@app.get("/sua/html")
+async def sua_html(request: Request, name: str="조수아", desc: str="안녕하세요, 저는 조수아"):
+    return templates.TemplateResponse("example.html", {"request": request, "name": name, "desc": desc})
